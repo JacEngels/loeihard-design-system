@@ -2,6 +2,10 @@
 
 Apps pick up changes with `git submodule update --remote loei`. Breaking changes include a **Migration** line.
 
+## 0.3.1 — 2026-10-10
+- Added `prompts/new-app.md` and `prompts/adopt-existing-app.md`: copy-paste agent prompts for starting a new app on LOEI
+  and migrating an existing one.
+
 ## 0.3.0 — 2026-10-10
 - Layout & grid: 4/8/12-column grid with responsive CSS variables (`--grid-*`, `--header-height`, `--aside-width`, …),
   container widths (`max-w-narrow|default|wide`), `components/layout.tsx` (Page, PageHeader, Grid, Split, MasterDetail,

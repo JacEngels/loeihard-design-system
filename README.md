@@ -13,6 +13,7 @@ One design system for every app, dashboard and site Loeihard! builds, by hand or
 | `components/` | Reference components: `button`, `button-cta`, `button-expand`, `layout` (grid + page patterns), `app-shell`, `field` (inputs), `controls` (checkbox/radio/switch), `tabs`, `icon`, `stat-tile`, `chart-theme` |
 | `templates/app/` | `AGENTS.md` + `CLAUDE.md` templates for apps that use the system |
 | `scripts/connect-app.sh` | Creates those files in an app (`bash loei/scripts/connect-app.sh "App name"`) |
+| `prompts/` | Copy-paste prompts for agents: `adopt-existing-app.md` (migrate an app) and `new-app.md` (start an app on LOEI) |
 | `CHANGELOG.md` | What changed per version and how to migrate |
 | `assets/logo.svg` | Wordmark (uses `currentColor`, so it's ink or white via `text-*`) |
 
@@ -34,6 +35,10 @@ git commit -m "Connect LOEI design system"
 Then fill in "About this app" in the new `AGENTS.md`. For a fresh project, ask your agent:
 *"Set up this project following loei/AGENTS.md section 3."* It wires up the theme import, the `@loei/*` alias and the
 shadcn overrides.
+
+**Prompts for agents:** use [`prompts/new-app.md`](prompts/new-app.md) for a new app and
+[`prompts/adopt-existing-app.md`](prompts/adopt-existing-app.md) to move an existing app onto LOEI. Both include the
+setup above, so you can also just paste the prompt and let the agent do it.
 
 ### 2 · How agents find it
 - `AGENTS.md` (app root) tells every agent to read `loei/AGENTS.md` first and never to edit `loei/`. Codex, Cursor,
